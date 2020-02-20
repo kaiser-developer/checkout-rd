@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-dark bg-dark" style="background-color: #e3f2fd;">
             <a class="navbar-brand" href="#">
-              <img src="images/logo.svg.png" width="220" height="30" alt="">
+                <img src="images/logo.svg.png" width="220" height="30" alt="">
             </a>
             <div class="continuar-cp">
                 <form class="form-inline my-2 my-lg-0">
                     <button class="btn btn-outline-primary" type="submit">Continuar comprando</button>
                 </form>
             </div>
-          </nav>
+        </nav>
     </header>
     <main class="container">
-        <form class="row dados center" id="checkout" method="GET">
+        <form class="row dados center" id="checkout" method="POST">
             <div class="col-md-4">
                 <header class="card-header bg-warning">
                     <img src="images/casa.svg" alt="" srcset="" width="25" height="25">
@@ -31,27 +33,34 @@
                 <div class="border border-top-0 mt-2 p-4">
                     <div class="form-group">
                         <label for="nome-completo">Nome completo:</label>
-                        <input class="form-control" type="text" name="nomeCompleto" placeholder="Digite seu nome completo..." id="nome-completo">
+                        <input class="form-control" type="text" name="nomeCompleto"
+                            placeholder="Digite seu nome completo..." id="nome-completo">
                     </div>
-                    <div class="form-group">                        
+                    <div class="form-group">
                         <label for="cpf">CPF:</label>
                         <input class="form-control" type="text" name="cpf" placeholder="Digite seu CPF..." id="cpf">
+                        <text class="text-danger font-italic" id="text-cpf-inval">CPF inválido!</text>
+                        <text class="text-success font-italic" id="text-cpf-valido">CPF Válido!</text>
                     </div>
                     <div class="form-group">
                         <label for="telefone">Telefone:</label>
-                        <input class="form-control" type="tel" name="telefone" placeholder="Digite seu telefone..." id="telefone">
+                        <input class="form-control" type="tel" name="telefone" placeholder="Digite seu telefone..."
+                            id="telefone">
                     </div>
                     <div class="form-group">
                         <label for="email">email:</label>
-                        <input class="form-control" type="email" name="email" placeholder="Digite seu email..." id="email">
+                        <input class="form-control" type="email" name="email" placeholder="Digite seu email..."
+                            id="email">
                     </div>
                     <div class="form-group">
                         <label for="senha">Senha:</label>
-                        <input class="form-control" type="password" name="senha" placeholder="Digite uma senha..." id="senha">
+                        <input class="form-control" type="password" name="senha" placeholder="Digite uma senha..."
+                            id="senha">
                     </div>
                     <div class="form-group">
                         <label for="conf-senha">Confirmar senha:</label>
-                        <input class="form-control" type="password" name="conf-senha" placeholder="Confirme sua senha..." id="conf-senha">
+                        <input class="form-control" type="password" name="conf-senha"
+                            placeholder="Confirme sua senha..." id="conf-senha">
                     </div>
                 </div>
             </div>
@@ -65,21 +74,25 @@
                         <label for="cep">CEP:</label>
                         <input class="form-control" type="text" name="cpf" placeholder="Digite seu CEP..." id="cep">
                     </div>
-                    <div class="form-group">                        
+                    <div class="form-group">
                         <label for="endereco">Endereço:</label>
-                        <input class="form-control" type="text" name="endereco" placeholder="Digite seu endereço..." id="endereco">
+                        <input class="form-control" type="text" name="endereco" placeholder="Digite seu endereço..."
+                            id="endereco">
                     </div>
                     <div class="form-group">
                         <label for="numero">Numero:</label>
-                        <input class="form-control" type="number" name="numero" placeholder="Digite o numero..." id="numero">
+                        <input class="form-control" type="number" name="numero" placeholder="Digite o numero..."
+                            id="numero">
                     </div>
                     <div class="form-group">
                         <label for="complemento">Complemento:</label>
-                        <input class="form-control" type="text" name="complemento" placeholder="Digite um complemento..." id="complemento">
+                        <input class="form-control" type="text" name="complemento"
+                            placeholder="Digite um complemento..." id="complemento">
                     </div>
                     <div class="form-group">
                         <label for="bairro">Bairro:</label>
-                        <input class="form-control" type="text" name="bairro" placeholder="Digite um bairro..." id="bairro">
+                        <input class="form-control" type="text" name="bairro" placeholder="Digite um bairro..."
+                            id="bairro">
                     </div>
                     <div class="form-group row">
                         <div class="col-6">
@@ -90,9 +103,6 @@
                             <label for="estado">Estado:</label>
                             <select class="form-control" name="estado" id="estado">
                                 <option value="" disabled selected>Estado</option>
-                                <option value="SP">SP</option>
-                                <option value="RJ">RJ</option>
-                                <option value="ES">ES</option>
                             </select>
                         </div>
                     </div>
@@ -114,37 +124,39 @@
                 <div class="border mt-2 p-4">
                     <table class="table table-striped">
                         <thead class="">
-                          <tr>
-                            <th scope="col">Produtos</th>
-                            <th scope="col">Preço</th>
-                          </tr>
+                            <tr>
+                                <th scope="col">Produtos</th>
+                                <th scope="col">Preço</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
-                              <th scope="row">Camiseta</th>
-                              <td>R$ 40,00</td>
+                                <th scope="row">Camiseta</th>
+                                <td>R$ 40,00</td>
                             </tr>
                             <tr>
                                 <th scope="row">Calça</th>
                                 <td>R$ 100,00</td>
-                              </tr>
-                              <tr>
+                            </tr>
+                            <tr>
                                 <th scope="row">Bermuda</th>
                                 <td>R$ 50,00</td>
-                              </tr>
+                            </tr>
                         </tbody>
                     </table>
                     <h5 class="p-2">Total R$ </h5>
                 </div>
                 <div class="border border-top-0 mt-2 p-4">
                     <div class="form-group">
-                        <label for="numeroCartao">Numero do cartão:</label>
-                        <input class="form-control" type="text" name="numeroCartao" placeholder="Digite o numero do cartão..." id="numeroCartao">
+                        <label for="numero-cartao">Numero do cartão:</label>
+                        <input class="form-control" type="text" name="numero-cartao"
+                            placeholder="Digite o numero do cartão..." id="numero-cartao">
                     </div>
                     <div class="form-group row">
                         <div class="col-9">
                             <label for="data-validade">Data validade:</label>
-                            <input class="form-control" type="month" name="data-validade" placeholder="data-validade" id="data-validade">
+                            <input class="form-control" type="month" name="data-validade" placeholder="data-validade"
+                                id="data-validade">
                         </div>
                         <div class="col-3">
                             <label for="cod-cartao">CVV:</label>
@@ -153,19 +165,52 @@
                     </div>
                     <div class="form-group">
                         <label for="nome-titular">Nome titular:</label>
-                        <input class="form-control" type="text" name="nome-titular" placeholder="Digite um complemento..." id="nome-titular">
+                        <input class="form-control" type="text" name="nome-titular"
+                            placeholder="Digite um complemento..." id="nome-titular">
                     </div>
                     <div class="form-group">
                         <label for="cpf-titular">CPF do titular:</label>
-                        <input class="form-control" type="text" name="cpf-titular" placeholder="Digite o CPF do titular..." id="cpf-titular">
+                        <input class="form-control" type="text" name="cpf-titular"
+                            placeholder="Digite o CPF do titular..." id="cpf-titular">
                     </div>
                     <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-success" id="btn-finalizar">Finalizar compra</button>
+                        <button type="button" class="btn btn-success" id="btn-finalizar" data-toggle="modal"
+                            data-target="#modal-finalizar">Finalizar compra</button>
                     </div>
                 </div>
             </div>
         </form>
     </main>
+
+    <div class="modal" tabindex="-1" role="dialog" id="modal-finalizar">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Compra realizada com sucesso!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Compra realizada com sucesso, volte mais vezes!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
